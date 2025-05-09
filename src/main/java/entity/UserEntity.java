@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,7 +15,7 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본 키 자동 생성
     private Long id;
 
-    @Column(nullable = false, unique = true) // 이메일 필수, 유니크 제약 조건
+    @Column(nullable = true) // ← 변경!
     private String email;
 
     @Column(nullable = false) // 비밀번호 필수
